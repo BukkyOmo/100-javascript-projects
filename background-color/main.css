@@ -1,0 +1,17 @@
+body{
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button{
+    background-color: yellow;
+    width: 85px;
+    padding: 9px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #000;
+    font-size: 15px;
+}
