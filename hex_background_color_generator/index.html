@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="btn-container">
+            <h1>HEX COLOR: <span id="hex-value">#FFFFFF</span></h1>
+            <button>Click me</button>
+        </div>
+    </div>
+
+    <script>
+        const hex_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+        const btn = document.getElementsByTagName('button');
+        let hex_value = document.getElementById('hex-value');
+            
+        const click = () => {
+            let hex = '#';
+            for (let i = 0; i < 6; i++) {
+                const get_random_array_value = hex_array[Math.floor(Math.random() * hex_array.length)];
+                hex += get_random_array_value;
+            }
+
+            hex_value.textContent = hex;
+            document.body.style.backgroundColor = hex;
+        };
+        btn[0].addEventListener('click', click);
+    </script>
+</body>
+</html>
