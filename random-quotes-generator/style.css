@@ -1,0 +1,57 @@
+body{
+    background-color: #DDD356;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 600px;
+    height: auto;
+    border: 1px solid #ece6a7;
+    padding: 40px 50px;
+    background-color: #ece6a7;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+button{
+    padding: 15px;
+    font-size: 22px;
+    background-color: mediumturquoise;
+    color: white;
+    outline: none;
+    border: 1px solid mediumturquoise;
+    cursor: pointer;
+}
+
+span{
+    text-align: right;
+}
+
+.fa-quote-left{
+    font-size: 80px;
+}
+
+.quote-container{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.author{
+    display: flex;
+    justify-content: flex-end;
+    color: mediumturquoise;
+    font-size: 18px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1c70674a53.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="btn-container">
+            <button>Generate Quote</button>
+        </div>
+            <div class="quote-container">
+                <span class="quote-span"><i class="fas fa-quote-left"></i></span>
+                <p>Life is too short and sweet to be spent by cribbing and complaining about things. Here are some random quotes about the
+                most wonderful gift that we've got.</p>
+            </div>
+            <span class="author">Life</span>
+    </div>
+
+    <script>
+        const quotes = [
+            {
+                quote: "Start writing, no matter what. The water does not flow until the faucet is turned on.",
+                author: "Louis L’Amour"
+            },
+               {
+                quote: "Get it down. Take chances. It may be bad, but it's the only way you can do anything really good.",
+                author: "William Faulkner"
+            },
+               {
+                quote: "The first draft is just you telling yourself the story.",
+                author: "Terry Pratchett"
+            },
+               {
+                quote: "Start before you’re ready.",
+                author: "Steven Pressfield"
+            },
+               {
+                quote: "You can always edit a bad page.You can’t edit a blank page",
+                author: "Jodi Picoult"
+            },
+               {
+                quote: "You can’t wait for inspiration. You have to go after it with a club",
+                author: "Jack London"
+            },
+               {
+                quote: "Outside of a dog, a book is man’s best friend. Inside of a dog, it’s too dark to read",
+                author: "Groucho Marx"
+            },
+               {
+                quote: "I love deadlines. I like the whooshing sound they make as they fly by.",
+                author: "Douglas Adams"
+            },
+               {
+                quote: "If you have no critics, you’ll likely have no success.",
+                author: "Malcolm X"
+            },
+               {
+                quote: "Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers, you cannot be successful or happy.",
+                author: "Norman Vincent Peale"
+            }
+        ];
+
+        const btn = document.getElementsByTagName('button');
+        const para = document.getElementsByTagName('p');
+        const span = document.getElementsByClassName('author')
+        
+        btn[0].addEventListener('click', () => {
+            const random_quote = quotes[Math.floor(Math.random() * quotes.length)];
+            para[0].innerHTML = random_quote.quote;
+            span[0].textContent = random_quote.author;
+        });
+    </script>
+</body>
+</html>
