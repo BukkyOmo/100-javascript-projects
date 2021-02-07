@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="container form">
+        <h1>A message you would like to pass</h1>
+        <input type="text" id="text">
+        <div class="btn-container">
+            <button>Submit</button>
+        </div>
+        <span class="error-span">Please enter a value</span>
+        <p>LAST MESSAGE DELIVERED</p>
+        <span id="output-message"></span>
+    </form>
+
+    <script>
+        const inputText = document.getElementById('text');
+        const form = document.getElementsByClassName('form');
+        const message = document.getElementById('output-message');
+        const error = document.getElementsByClassName('error-span');
+
+        form[0].addEventListener('submit', (e) => {
+            e.preventDefault();
+            if(!inputText.value){
+                error[0].classList.add('show');
+                setTimeout(() => {
+                    error[0].classList.remove('show')
+                }, 3000)
+            }
+            message.innerHTML = inputText.value;
+            inputText.value = ''
+        })
+    </script>
+</body>
+</html>

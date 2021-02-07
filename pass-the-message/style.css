@@ -1,0 +1,60 @@
+body{
+    background-color: mediumvioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+}
+
+.container{
+    display: grid;
+    text-align: center;
+    border: 1px solid #ffffff;
+    padding: 30px;
+    grid-gap: 8px;
+    min-width: 40%;
+    background-color: #FFFFFF;
+}
+
+input{
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+}
+
+button{
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    background-color: #4DF93D;
+    border: 1px solid #4DF93D;
+    text-transform: uppercase;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    margin: 0;
+    font-size: 20px;
+}
+
+#output-message{
+    color: mediumvioletred;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.error-span{
+    display: none;
+}
+
+.show{
+    background-color: red;
+    padding: 10px;
+    display: block;
+}
