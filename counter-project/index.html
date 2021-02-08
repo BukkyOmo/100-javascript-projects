@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>COUNTER</h1>
+        <p id="current-value">0</p>
+           <div class="counting">
+            <button class="btn" id="decrease-btn">DECREASE COUNT</button>
+            <button class="btn" id="increase-btn">INCREASE COUNT</button>
+        </div>
+    </div>
+
+    <script>
+        const decrease_btn = document.getElementById('decrease-btn');
+        const increase_btn = document.getElementById('increase-btn');
+        const current_value = document.getElementById('current-value');
+
+        decrease_btn.addEventListener('click', () => {  
+            current_value.textContent--   
+            if(current_value.textContent < 0){
+                current_value.style.color = 'red';
+            }else if(current_value.textContent == 0){
+                current_value.style.color = 'black'
+            }
+        })
+        increase_btn.addEventListener('click', () => {
+            current_value.textContent++
+            if (current_value.textContent > 0) {
+                current_value.style.color = 'green';
+            }else if(current_value.textContent == 0){
+                current_value.style.color = 'black'
+            }
+            })
+    </script>
+</body>
+</html>
