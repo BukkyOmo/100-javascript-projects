@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <button class="button prev" id="prev">prev</button>
+        <button class="button next" id="next">next</button>
+        <img src="./images/benz1.jpg" alt="benz" id="img">
+    </div>
+
+    <script>
+        const array = ['./images/benz1.jpg', './images/car1.jpg', './images/car2.jpg','./images/car3.jpg','./images/car4.jpg','./images/car5.jpg'];
+        const button1 = document.getElementById('prev');
+        const button2 = document.getElementById('next');
+        let img = document.getElementById('img');
+        let counter = 0;
+        
+        
+        button1.addEventListener('click', () => {
+            counter--;
+            if(counter < 0){
+                counter = array.length - 1;
+            }
+            img.src = array[counter]
+            });
+
+        button2.addEventListener('click', () => {
+            counter++;
+            if (counter > array.length - 1) {
+                counter = 0
+            }
+            img.src = array[counter];
+            });
+    </script>
+</body>
+</html>
