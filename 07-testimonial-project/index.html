@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CLIENT</h1>
+        <h2>TESTIMONIALS</h2>
+        <div class="review-div">
+            <div class="image-div"><img id="img" src="./images/benz1.jpg" alt="car"></div>
+            <h3 id="reviewer">CUSTOMER NAME</h3>
+            <p id="review">Lorem Ipsum has been the industry's standard dummy text.</p>
+            <div>
+                <button class="prev" id="prev">prev</button>
+                <button class="next" id="next">next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const arrayofReviewers = [
+            {
+                image: './images/user-1.jpg',
+                name: 'Alan Turing',
+                review: 'I do not regret buying the product'
+            },
+            {
+                image: './images/user-2.jpg',
+                name: 'Nicholas Tesla',
+                review: 'Great idea'
+            },
+            {
+                image: './images/user-3.jpg',
+                name: 'Ada Lovelace',
+                review: 'I love this product'
+            }
+        ]
+        let counter = 0;
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next')
+        const img = document.getElementById('img');
+        const reviewer = document.getElementById('reviewer');
+        const review = document.getElementById('review');
+
+        prevButton.onclick = () => {
+            counter--;
+            if(counter < 0){
+                counter = arrayofReviewers.length - 1;
+            }
+            img.src = arrayofReviewers[counter].image;
+            reviewer.textContent = arrayofReviewers[counter].name;
+            review.textContent = arrayofReviewers[counter].review;
+        }
+
+        nextButton.onclick = () => {
+                counter++;
+                if (counter === arrayofReviewers.length) {
+                    counter = 0;
+                }
+                img.src = arrayofReviewers[counter].image;
+                reviewer.textContent = arrayofReviewers[counter].name;
+                review.textContent = arrayofReviewers[counter].review;
+            }
+    </script>
+</body>
+</html>
